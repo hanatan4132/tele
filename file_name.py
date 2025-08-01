@@ -99,7 +99,8 @@ try:
         for element in child_elements:
             try:
                 # 注意：class 名稱中間要用 . 連接（不是空格）
-                name_element = element.find_element(By.CSS_SELECTOR, "div.document-name.middle-ellipsis-element")
+                name_element = element.find_element(By.CSS_SELECTOR, "div.document-name > middle-ellipsis-element")
+
                 file_name = name_element.text
                 if file_name:
                     file_names.append(file_name)
